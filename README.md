@@ -9,3 +9,6 @@ My theme for oh-my-zsh inspired by [zeta-zsh-theme](https://github.com/skylerlee
 ```
 ZSH_THEME="bogo"
 ```
+## License
+
+The MIT License.
