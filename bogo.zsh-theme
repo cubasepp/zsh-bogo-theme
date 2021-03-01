@@ -84,6 +84,9 @@ function get_versions {
     if hash rvm 2>/dev/null; then
         rvm current 2>/dev/null
     fi
+    if hash rbenv 2>/dev/null; then
+        rbenv_prompt_info
+    fi
 }
 
 
@@ -101,7 +104,7 @@ $(get_git_prompt) \
 %b\
 %{$reset_color%}"
 
-  local right_prompt="%{$blue%}[$(get_versions)]%{$reset_color%}"
+  local right_prompt="%{$blue%}$(get_versions)%{$reset_color%}"
   print -rP "$left_prompt$(get_space $left_prompt $right_prompt)$right_prompt"
 }
 
